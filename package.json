@@ -1,0 +1,32 @@
+{
+  "name": "cypress",
+  "version": "1.0.0",
+  "description": "Cypress end-to-end test automation framework",
+  "main": "index.js",
+  "scripts": {
+    "test": "node_modules/.bin/cypress run",
+    "headed": "npm run test --headed",
+    "testChrome": "npm run test -b chrome",
+    "recordDashboard": "npm run test --record --key ade7c993-4247-4d32-9204-9e6a3ee404eb",
+    "runSmokeScenarios": "npx cypress-tags run -e TAGS=\"@Smoke\" --spec cypress/integration/features/*.feature --headed --browser chrome"
+  },
+  "keywords": [
+    "Cypress",
+    "automation",
+    "user",
+    "journey"
+  ],
+  "author": "Vrushali Chawda",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^7.7.0",
+    "cypress-cucumber-preprocessor": "^4.1.1",
+    "cypress-iframe": "^1.0.1",
+    "cypress-sql-server": "^1.0.0",
+    "mocha": "^8.4.0",
+    "mochawesome": "^6.2.2"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true
+  }
+}
